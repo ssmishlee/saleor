@@ -1,0 +1,31 @@
+virtualenv -p python venv
+source venv/bin/activate
+
+pip install -r requirement.txt
+
+
+#setting up postgres user
+sudo su - postgres
+psql
+
+CREATE ROLE saleor WITH LOGIN PASSWORD 'saleor';
+CREATE DATABASE saleor;
+ALTER USER saleor WITH SUPERUSER;
+
+
+export DEFAULT_COUNTRY=IN
+export DEFAULT_CURRENCY=INR
+export SECRET_KEY=2885278924816
+export EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@smtp.gmail.com:465/?ssl=True
+
+
+python manage.py migrate
+
+python manage.py populatedb
+
+python manage.py createsuperuser
+
+
+
+python manage.py runserver 0.0.0.0:8000
+
