@@ -1,7 +1,7 @@
 virtualenv -p python venv
 source venv/bin/activate
 
-pip install -r requirement.txt
+pip install -r requirement_dev.txt
 
 
 #setting up postgres user
@@ -13,11 +13,6 @@ CREATE DATABASE saleor;
 ALTER USER saleor WITH SUPERUSER;
 
 
-export DEFAULT_COUNTRY=IN
-export DEFAULT_CURRENCY=INR
-export SECRET_KEY=2885278924816
-export EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@smtp.gmail.com:465/?ssl=True
-
 
 python manage.py migrate
 
@@ -25,7 +20,18 @@ python manage.py populatedb
 
 python manage.py createsuperuser
 
+Linux:
+export DEFAULT_COUNTRY=IN                   
+export DEFAULT_CURRENCY=INR                 
+export SECRET_KEY=4816278922885             
+export EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@smtp.gmail.com:465/?ssl=True
 
+Windows:
+set DEFAULT_COUNTRY=IN                   
+set DEFAULT_CURRENCY=INR                 
+set SECRET_KEY=4816278922885             
+set EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@smtp.gmail.com:465/?ssl=True 
 
 python manage.py runserver 0.0.0.0:8000
 
+ 
