@@ -13,14 +13,11 @@ CREATE DATABASE saleor;
 ALTER USER saleor WITH SUPERUSER;
 
 
-<<<<<<< Updated upstream
-=======
 export DEFAULT_COUNTRY=IN
 export DEFAULT_CURRENCY=INR
 export SECRET_KEY=2885278924816
-export EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@mail.mishlee.com:465/?ssl=True
+export EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@webmail.mishlee.com:465/?ssl=True
 
->>>>>>> Stashed changes
 
 python manage.py migrate
 
@@ -38,14 +35,10 @@ Windows:
 set DEFAULT_COUNTRY=IN                   
 set DEFAULT_CURRENCY=INR                 
 set SECRET_KEY=4816278922885             
-set EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@smtp.gmail.com:465/?ssl=True 
+set EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@webmail.mishlee.com:465/?ssl=True 
 
 python manage.py runserver 0.0.0.0:8000
 
-<<<<<<< Updated upstream
- 
-=======
 
 
 export EMAIL_URL=smtp://sharad.salvi@mishlee.com:Meeshu4816@smtp.gmail.com:465/?ssl=True
->>>>>>> Stashed changes
